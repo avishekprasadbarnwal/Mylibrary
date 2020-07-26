@@ -17,13 +17,14 @@ app.use(expressLayouts);
 app.use(express.static('public'));
 
 //process.env.DATABASE_URL
-mongoose.connect('mongodb://localhost:27017/mylibrary', { 
+mongoose.connect('mongodb+srv://user:avi123@cluster0.bnx27.mongodb.net/mylibrary?retryWrites=true&w=majority', { 
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 const db = mongoose.model('Cat', {
     name: String
 });
+
 // db.on('error', error => console.error(error))
 // db.once('open', () => console.log('Connected to mongoose'))
 
